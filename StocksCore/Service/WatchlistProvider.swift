@@ -8,7 +8,7 @@
 import Foundation
 
 public class WatchlistProvider: WatchlistService {
-    static let refreshInterval = 60.0 //seconds
+    static let blockedRefreshInterval = 10.0 //seconds
     let symbolsService: WatchlistSymbolsService
     let quoteService: QuoteService
     var stocks: [Stock]
@@ -66,13 +66,7 @@ public class WatchlistProvider: WatchlistService {
 
 private extension StockQuote {
     func needsRefresh(now: Date) -> Bool {
-        return now - self.date > WatchlistProvider.refreshInterval
+        let interval = now.timeIntervalSince(self.date)
+        return interval > WatchlistProvider.blockedRefreshInterval
     }
-}
-
-private extension Date {
-    static func - (lhs: Date, rhs: Date) -> TimeInterval {
-        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
-    }
-
 }

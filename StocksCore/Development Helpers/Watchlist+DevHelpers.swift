@@ -27,10 +27,12 @@ struct AnyError: Error {}
 public struct QuotesServiceRandomFailure: QuoteService {
     public init() {}
     public func getQuote(symbol: String, completion: @escaping (Result<StockQuote, Error>) -> Void) {
-        if Bool.random() {
-            completion(.success(StockQuote.randomQuote(symbol: symbol)))
-        } else {
-            completion(.failure(AnyError()))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            if Bool.random() {
+                completion(.success(StockQuote.randomQuote(symbol: symbol)))
+            } else {
+                completion(.failure(AnyError()))
+            }
         }
     }
 }

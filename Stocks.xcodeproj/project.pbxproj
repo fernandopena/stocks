@@ -113,7 +113,7 @@
 		72C0005A27A07EBC0008218E /* FinnhubClient+Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinnhubClient+Quote.swift"; sourceTree = "<group>"; };
 		72C0006027A088CB0008218E /* StockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRow.swift; sourceTree = "<group>"; };
 		72C0006427A089010008218E /* StockRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRowViewModel.swift; sourceTree = "<group>"; };
-		72DC8C07279EF7ED00ECB001 /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72DC8C07279EF7ED00ECB001 /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DC8C0A279EF7ED00ECB001 /* StocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp.swift; sourceTree = "<group>"; };
 		72DC8C0E279EF7EF00ECB001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72DC8C11279EF7EF00ECB001 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 		72DC8C08279EF7ED00ECB001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72DC8C07279EF7ED00ECB001 /* Stocks.app */,
+				72DC8C07279EF7ED00ECB001 /* StocksApp.app */,
 				7254FB7127A2B211007FBC13 /* StocksCore.framework */,
 				7254FB8427A2B36E007FBC13 /* StocksUI.framework */,
 				7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */,
@@ -381,9 +381,9 @@
 			productReference = 7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		72DC8C06279EF7ED00ECB001 /* Stocks */ = {
+		72DC8C06279EF7ED00ECB001 /* StocksApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 72DC8C15279EF7EF00ECB001 /* Build configuration list for PBXNativeTarget "Stocks" */;
+			buildConfigurationList = 72DC8C15279EF7EF00ECB001 /* Build configuration list for PBXNativeTarget "StocksApp" */;
 			buildPhases = (
 				72DC8C03279EF7ED00ECB001 /* Sources */,
 				72DC8C04279EF7ED00ECB001 /* Frameworks */,
@@ -397,9 +397,9 @@
 				7254FB8927A2B36E007FBC13 /* PBXTargetDependency */,
 				7254FBA727A2B63E007FBC13 /* PBXTargetDependency */,
 			);
-			name = Stocks;
+			name = StocksApp;
 			productName = Stocks;
-			productReference = 72DC8C07279EF7ED00ECB001 /* Stocks.app */;
+			productReference = 72DC8C07279EF7ED00ECB001 /* StocksApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -439,7 +439,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				72DC8C06279EF7ED00ECB001 /* Stocks */,
+				72DC8C06279EF7ED00ECB001 /* StocksApp */,
 				7254FB7027A2B211007FBC13 /* StocksCore */,
 				7254FB8327A2B36E007FBC13 /* StocksUI */,
 				7254FBA127A2B63E007FBC13 /* FinnhubClient */,
@@ -624,6 +624,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +655,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -782,7 +784,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -837,7 +839,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -864,6 +866,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -894,6 +897,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -946,7 +950,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		72DC8C15279EF7EF00ECB001 /* Build configuration list for PBXNativeTarget "Stocks" */ = {
+		72DC8C15279EF7EF00ECB001 /* Build configuration list for PBXNativeTarget "StocksApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				72DC8C16279EF7EF00ECB001 /* Debug */,

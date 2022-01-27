@@ -21,7 +21,9 @@ struct StocksApp: App {
     
     var body: some Scene {
         WindowGroup {
-            WatchlistView(viewModel: viewModel)
+            NavigationView {
+                WatchlistView(viewModel: viewModel)
+            }
         }
     }
 }
