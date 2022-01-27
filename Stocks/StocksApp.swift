@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import StocksCore
+import StocksUI
 
 @main
 struct StocksApp: App {
+    
+    let viewModel: WatchlistViewModel
+
+    init() {
+        let service = WatchlistProvider(symbolsService: WatchlistSymbolsServiceMock(), quoteService: QuotesServiceRandomFailure())
+        self.viewModel = WatchlistViewModel(service: service)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WatchlistView(viewModel: viewModel)
         }
     }
 }

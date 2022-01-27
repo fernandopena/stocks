@@ -7,36 +7,262 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7254FB7427A2B211007FBC13 /* StocksCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7254FB7327A2B211007FBC13 /* StocksCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7254FB7727A2B211007FBC13 /* StocksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB7127A2B211007FBC13 /* StocksCore.framework */; };
+		7254FB7827A2B211007FBC13 /* StocksCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB7127A2B211007FBC13 /* StocksCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7254FB7C27A2B24C007FBC13 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F8B427A18B7200B84CBD /* Stock.swift */; };
+		7254FB7D27A2B251007FBC13 /* WatchlistProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F8BE27A18FEC00B84CBD /* WatchlistProvider.swift */; };
+		7254FB7E27A2B251007FBC13 /* WatchlistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C1D279EF8E900ECB001 /* WatchlistService.swift */; };
+		7254FB8727A2B36E007FBC13 /* StocksUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7254FB8627A2B36E007FBC13 /* StocksUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7254FB8A27A2B36E007FBC13 /* StocksUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB8427A2B36E007FBC13 /* StocksUI.framework */; };
+		7254FB8B27A2B36E007FBC13 /* StocksUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB8427A2B36E007FBC13 /* StocksUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7254FB9027A2B38E007FBC13 /* WatchlistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F8B827A18C0700B84CBD /* WatchlistPresenter.swift */; };
+		7254FB9127A2B38E007FBC13 /* StockRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0006427A089010008218E /* StockRowViewModel.swift */; };
+		7254FB9227A2B38E007FBC13 /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C18279EF86F00ECB001 /* WatchlistViewModel.swift */; };
+		7254FB9327A2B38E007FBC13 /* WatchlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C1A279EF87E00ECB001 /* WatchlistView.swift */; };
+		7254FB9427A2B38E007FBC13 /* StockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0006027A088CB0008218E /* StockRow.swift */; };
+		7254FB9627A2B3A9007FBC13 /* StocksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB7127A2B211007FBC13 /* StocksCore.framework */; };
+		7254FB9727A2B3A9007FBC13 /* StocksCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB7127A2B211007FBC13 /* StocksCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7254FB9C27A2B522007FBC13 /* Watchlist+DevHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F8BC27A18CB300B84CBD /* Watchlist+DevHelpers.swift */; };
+		7254FBA527A2B63E007FBC13 /* FinnhubClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 7254FBA427A2B63E007FBC13 /* FinnhubClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7254FBA827A2B63E007FBC13 /* FinnhubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */; };
+		7254FBA927A2B63E007FBC13 /* FinnhubClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7254FBAD27A2B64A007FBC13 /* FinnhubClient+Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005A27A07EBC0008218E /* FinnhubClient+Quote.swift */; };
+		7254FBAE27A2B64A007FBC13 /* FinnhubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C33279EFAB400ECB001 /* FinnhubClient.swift */; };
+		7254FBAF27A2B65F007FBC13 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005427A040640008218E /* Quote.swift */; };
+		7254FBB027A2B662007FBC13 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005827A078CA0008218E /* HTTPError.swift */; };
+		7254FBB127A2B662007FBC13 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005627A078BB0008218E /* JSONMapper.swift */; };
+		7254FBB227A2B662007FBC13 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C39279F3D0D00ECB001 /* HTTPClient.swift */; };
 		72DC8C0B279EF7ED00ECB001 /* StocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C0A279EF7ED00ECB001 /* StocksApp.swift */; };
-		72DC8C0D279EF7ED00ECB001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C0C279EF7ED00ECB001 /* ContentView.swift */; };
 		72DC8C0F279EF7EF00ECB001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DC8C0E279EF7EF00ECB001 /* Assets.xcassets */; };
 		72DC8C12279EF7EF00ECB001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DC8C11279EF7EF00ECB001 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7254FB7527A2B211007FBC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72DC8BFF279EF7ED00ECB001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7254FB7027A2B211007FBC13;
+			remoteInfo = StocksCore;
+		};
+		7254FB8827A2B36E007FBC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72DC8BFF279EF7ED00ECB001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7254FB8327A2B36E007FBC13;
+			remoteInfo = StocksUI;
+		};
+		7254FB9827A2B3A9007FBC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72DC8BFF279EF7ED00ECB001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7254FB7027A2B211007FBC13;
+			remoteInfo = StocksCore;
+		};
+		7254FBA627A2B63E007FBC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72DC8BFF279EF7ED00ECB001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7254FBA127A2B63E007FBC13;
+			remoteInfo = FinnhubClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7254FB9A27A2B3A9007FBC13 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7254FB9727A2B3A9007FBC13 /* StocksCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72DC8C32279EFA6300ECB001 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7254FBA927A2B63E007FBC13 /* FinnhubClient.framework in Embed Frameworks */,
+				7254FB7827A2B211007FBC13 /* StocksCore.framework in Embed Frameworks */,
+				7254FB8B27A2B36E007FBC13 /* StocksUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7254FB7127A2B211007FBC13 /* StocksCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StocksCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7254FB7327A2B211007FBC13 /* StocksCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StocksCore.h; sourceTree = "<group>"; };
+		7254FB8427A2B36E007FBC13 /* StocksUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StocksUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7254FB8627A2B36E007FBC13 /* StocksUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StocksUI.h; sourceTree = "<group>"; };
+		7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinnhubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7254FBA427A2B63E007FBC13 /* FinnhubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinnhubClient.h; sourceTree = "<group>"; };
+		72A8F8B427A18B7200B84CBD /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		72A8F8B827A18C0700B84CBD /* WatchlistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistPresenter.swift; sourceTree = "<group>"; };
+		72A8F8BC27A18CB300B84CBD /* Watchlist+DevHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Watchlist+DevHelpers.swift"; sourceTree = "<group>"; };
+		72A8F8BE27A18FEC00B84CBD /* WatchlistProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistProvider.swift; sourceTree = "<group>"; };
+		72C0005427A040640008218E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		72C0005627A078BB0008218E /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
+		72C0005827A078CA0008218E /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		72C0005A27A07EBC0008218E /* FinnhubClient+Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinnhubClient+Quote.swift"; sourceTree = "<group>"; };
+		72C0006027A088CB0008218E /* StockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRow.swift; sourceTree = "<group>"; };
+		72C0006427A089010008218E /* StockRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRowViewModel.swift; sourceTree = "<group>"; };
 		72DC8C07279EF7ED00ECB001 /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DC8C0A279EF7ED00ECB001 /* StocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp.swift; sourceTree = "<group>"; };
-		72DC8C0C279EF7ED00ECB001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72DC8C0E279EF7EF00ECB001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72DC8C11279EF7EF00ECB001 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72DC8C18279EF86F00ECB001 /* WatchlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
+		72DC8C1A279EF87E00ECB001 /* WatchlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistView.swift; sourceTree = "<group>"; };
+		72DC8C1D279EF8E900ECB001 /* WatchlistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistService.swift; sourceTree = "<group>"; };
+		72DC8C33279EFAB400ECB001 /* FinnhubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnhubClient.swift; sourceTree = "<group>"; };
+		72DC8C39279F3D0D00ECB001 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		72DC8C04279EF7ED00ECB001 /* Frameworks */ = {
+		7254FB6E27A2B211007FBC13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7254FB8127A2B36E007FBC13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FB9627A2B3A9007FBC13 /* StocksCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FB9F27A2B63E007FBC13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72DC8C04279EF7ED00ECB001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FBA827A2B63E007FBC13 /* FinnhubClient.framework in Frameworks */,
+				7254FB7727A2B211007FBC13 /* StocksCore.framework in Frameworks */,
+				7254FB8A27A2B36E007FBC13 /* StocksUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7254FB7227A2B211007FBC13 /* StocksCore */ = {
+			isa = PBXGroup;
+			children = (
+				7254FB7327A2B211007FBC13 /* StocksCore.h */,
+				72A8F8BB27A18C9900B84CBD /* Development Helpers */,
+				72A8F8B627A18BD500B84CBD /* Service */,
+				72A8F8B327A18B6700B84CBD /* Model */,
+			);
+			path = StocksCore;
+			sourceTree = "<group>";
+		};
+		7254FB8527A2B36E007FBC13 /* StocksUI */ = {
+			isa = PBXGroup;
+			children = (
+				7254FB8627A2B36E007FBC13 /* StocksUI.h */,
+				7254FB8F27A2B37B007FBC13 /* Watchlist */,
+			);
+			path = StocksUI;
+			sourceTree = "<group>";
+		};
+		7254FB8F27A2B37B007FBC13 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				72A8F8B827A18C0700B84CBD /* WatchlistPresenter.swift */,
+				72DC8C18279EF86F00ECB001 /* WatchlistViewModel.swift */,
+				72DC8C1A279EF87E00ECB001 /* WatchlistView.swift */,
+				72C0006027A088CB0008218E /* StockRow.swift */,
+				72C0006427A089010008218E /* StockRowViewModel.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		7254FB9527A2B3A9007FBC13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7254FBA327A2B63E007FBC13 /* FinnhubClient */ = {
+			isa = PBXGroup;
+			children = (
+				7254FBA427A2B63E007FBC13 /* FinnhubClient.h */,
+				72DC8C33279EFAB400ECB001 /* FinnhubClient.swift */,
+				72C0005A27A07EBC0008218E /* FinnhubClient+Quote.swift */,
+				72C0005327A03BB80008218E /* Models */,
+				72C0005227A03BAE0008218E /* Shared */,
+			);
+			path = FinnhubClient;
+			sourceTree = "<group>";
+		};
+		72A8F8B327A18B6700B84CBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72A8F8B427A18B7200B84CBD /* Stock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72A8F8B627A18BD500B84CBD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				72DC8C1D279EF8E900ECB001 /* WatchlistService.swift */,
+				72A8F8BE27A18FEC00B84CBD /* WatchlistProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		72A8F8BB27A18C9900B84CBD /* Development Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				72A8F8BC27A18CB300B84CBD /* Watchlist+DevHelpers.swift */,
+			);
+			path = "Development Helpers";
+			sourceTree = "<group>";
+		};
+		72C0005227A03BAE0008218E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				72C0005827A078CA0008218E /* HTTPError.swift */,
+				72C0005627A078BB0008218E /* JSONMapper.swift */,
+				72DC8C39279F3D0D00ECB001 /* HTTPClient.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		72C0005327A03BB80008218E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72C0005427A040640008218E /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		72DC8BFE279EF7ED00ECB001 = {
 			isa = PBXGroup;
 			children = (
 				72DC8C09279EF7ED00ECB001 /* Stocks */,
+				7254FB8527A2B36E007FBC13 /* StocksUI */,
+				7254FB7227A2B211007FBC13 /* StocksCore */,
+				7254FBA327A2B63E007FBC13 /* FinnhubClient */,
 				72DC8C08279EF7ED00ECB001 /* Products */,
+				7254FB9527A2B3A9007FBC13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,6 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				72DC8C07279EF7ED00ECB001 /* Stocks.app */,
+				7254FB7127A2B211007FBC13 /* StocksCore.framework */,
+				7254FB8427A2B36E007FBC13 /* StocksUI.framework */,
+				7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				72DC8C0A279EF7ED00ECB001 /* StocksApp.swift */,
-				72DC8C0C279EF7ED00ECB001 /* ContentView.swift */,
 				72DC8C0E279EF7EF00ECB001 /* Assets.xcassets */,
 				72DC8C10279EF7EF00ECB001 /* Preview Content */,
 			);
@@ -69,7 +297,90 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		7254FB6C27A2B211007FBC13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FB7427A2B211007FBC13 /* StocksCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FB7F27A2B36E007FBC13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FB8727A2B36E007FBC13 /* StocksUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FB9D27A2B63E007FBC13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FBA527A2B63E007FBC13 /* FinnhubClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		7254FB7027A2B211007FBC13 /* StocksCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7254FB7927A2B211007FBC13 /* Build configuration list for PBXNativeTarget "StocksCore" */;
+			buildPhases = (
+				7254FB6C27A2B211007FBC13 /* Headers */,
+				7254FB6D27A2B211007FBC13 /* Sources */,
+				7254FB6E27A2B211007FBC13 /* Frameworks */,
+				7254FB6F27A2B211007FBC13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StocksCore;
+			productName = StocksCore;
+			productReference = 7254FB7127A2B211007FBC13 /* StocksCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7254FB8327A2B36E007FBC13 /* StocksUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7254FB8C27A2B36E007FBC13 /* Build configuration list for PBXNativeTarget "StocksUI" */;
+			buildPhases = (
+				7254FB7F27A2B36E007FBC13 /* Headers */,
+				7254FB8027A2B36E007FBC13 /* Sources */,
+				7254FB8127A2B36E007FBC13 /* Frameworks */,
+				7254FB8227A2B36E007FBC13 /* Resources */,
+				7254FB9A27A2B3A9007FBC13 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7254FB9927A2B3A9007FBC13 /* PBXTargetDependency */,
+			);
+			name = StocksUI;
+			productName = StocksUI;
+			productReference = 7254FB8427A2B36E007FBC13 /* StocksUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7254FBA127A2B63E007FBC13 /* FinnhubClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7254FBAA27A2B63E007FBC13 /* Build configuration list for PBXNativeTarget "FinnhubClient" */;
+			buildPhases = (
+				7254FB9D27A2B63E007FBC13 /* Headers */,
+				7254FB9E27A2B63E007FBC13 /* Sources */,
+				7254FB9F27A2B63E007FBC13 /* Frameworks */,
+				7254FBA027A2B63E007FBC13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinnhubClient;
+			productName = FinnhubClient;
+			productReference = 7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		72DC8C06279EF7ED00ECB001 /* Stocks */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72DC8C15279EF7EF00ECB001 /* Build configuration list for PBXNativeTarget "Stocks" */;
@@ -77,10 +388,14 @@
 				72DC8C03279EF7ED00ECB001 /* Sources */,
 				72DC8C04279EF7ED00ECB001 /* Frameworks */,
 				72DC8C05279EF7ED00ECB001 /* Resources */,
+				72DC8C32279EFA6300ECB001 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7254FB7627A2B211007FBC13 /* PBXTargetDependency */,
+				7254FB8927A2B36E007FBC13 /* PBXTargetDependency */,
+				7254FBA727A2B63E007FBC13 /* PBXTargetDependency */,
 			);
 			name = Stocks;
 			productName = Stocks;
@@ -97,6 +412,15 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					7254FB7027A2B211007FBC13 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					7254FB8327A2B36E007FBC13 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					7254FBA127A2B63E007FBC13 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					72DC8C06279EF7ED00ECB001 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -116,11 +440,35 @@
 			projectRoot = "";
 			targets = (
 				72DC8C06279EF7ED00ECB001 /* Stocks */,
+				7254FB7027A2B211007FBC13 /* StocksCore */,
+				7254FB8327A2B36E007FBC13 /* StocksUI */,
+				7254FBA127A2B63E007FBC13 /* FinnhubClient */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7254FB6F27A2B211007FBC13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FB8227A2B36E007FBC13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FBA027A2B63E007FBC13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72DC8C05279EF7ED00ECB001 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,18 +481,256 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7254FB6D27A2B211007FBC13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FB7E27A2B251007FBC13 /* WatchlistService.swift in Sources */,
+				7254FB9C27A2B522007FBC13 /* Watchlist+DevHelpers.swift in Sources */,
+				7254FB7D27A2B251007FBC13 /* WatchlistProvider.swift in Sources */,
+				7254FB7C27A2B24C007FBC13 /* Stock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FB8027A2B36E007FBC13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FB9327A2B38E007FBC13 /* WatchlistView.swift in Sources */,
+				7254FB9127A2B38E007FBC13 /* StockRowViewModel.swift in Sources */,
+				7254FB9027A2B38E007FBC13 /* WatchlistPresenter.swift in Sources */,
+				7254FB9227A2B38E007FBC13 /* WatchlistViewModel.swift in Sources */,
+				7254FB9427A2B38E007FBC13 /* StockRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7254FB9E27A2B63E007FBC13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7254FBB027A2B662007FBC13 /* HTTPError.swift in Sources */,
+				7254FBB127A2B662007FBC13 /* JSONMapper.swift in Sources */,
+				7254FBB227A2B662007FBC13 /* HTTPClient.swift in Sources */,
+				7254FBAD27A2B64A007FBC13 /* FinnhubClient+Quote.swift in Sources */,
+				7254FBAF27A2B65F007FBC13 /* Quote.swift in Sources */,
+				7254FBAE27A2B64A007FBC13 /* FinnhubClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72DC8C03279EF7ED00ECB001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72DC8C0D279EF7ED00ECB001 /* ContentView.swift in Sources */,
 				72DC8C0B279EF7ED00ECB001 /* StocksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7254FB7627A2B211007FBC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7254FB7027A2B211007FBC13 /* StocksCore */;
+			targetProxy = 7254FB7527A2B211007FBC13 /* PBXContainerItemProxy */;
+		};
+		7254FB8927A2B36E007FBC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7254FB8327A2B36E007FBC13 /* StocksUI */;
+			targetProxy = 7254FB8827A2B36E007FBC13 /* PBXContainerItemProxy */;
+		};
+		7254FB9927A2B3A9007FBC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7254FB7027A2B211007FBC13 /* StocksCore */;
+			targetProxy = 7254FB9827A2B3A9007FBC13 /* PBXContainerItemProxy */;
+		};
+		7254FBA727A2B63E007FBC13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7254FBA127A2B63E007FBC13 /* FinnhubClient */;
+			targetProxy = 7254FBA627A2B63E007FBC13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7254FB7A27A2B211007FBC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GD9QM9HB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandopena.StocksCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7254FB7B27A2B211007FBC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GD9QM9HB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandopena.StocksCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7254FB8D27A2B36E007FBC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GD9QM9HB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandopena.StocksUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7254FB8E27A2B36E007FBC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GD9QM9HB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandopena.StocksUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7254FBAB27A2B63E007FBC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GD9QM9HB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandopena.FinnhubClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7254FBAC27A2B63E007FBC13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GD9QM9HB83;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandopena.FinnhubClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		72DC8C13279EF7EF00ECB001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -264,6 +850,7 @@
 		72DC8C16279EF7EF00ECB001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,6 +880,7 @@
 		72DC8C17279EF7EF00ECB001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +910,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7254FB7927A2B211007FBC13 /* Build configuration list for PBXNativeTarget "StocksCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7254FB7A27A2B211007FBC13 /* Debug */,
+				7254FB7B27A2B211007FBC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7254FB8C27A2B36E007FBC13 /* Build configuration list for PBXNativeTarget "StocksUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7254FB8D27A2B36E007FBC13 /* Debug */,
+				7254FB8E27A2B36E007FBC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7254FBAA27A2B63E007FBC13 /* Build configuration list for PBXNativeTarget "FinnhubClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7254FBAB27A2B63E007FBC13 /* Debug */,
+				7254FBAC27A2B63E007FBC13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		72DC8C02279EF7ED00ECB001 /* Build configuration list for PBXProject "Stocks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
