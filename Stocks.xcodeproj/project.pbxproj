@@ -33,6 +33,7 @@
 		7254FBB027A2B662007FBC13 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005827A078CA0008218E /* HTTPError.swift */; };
 		7254FBB127A2B662007FBC13 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005627A078BB0008218E /* JSONMapper.swift */; };
 		7254FBB227A2B662007FBC13 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C39279F3D0D00ECB001 /* HTTPClient.swift */; };
+		7268676827A43E7A0084ED72 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268676727A43E7A0084ED72 /* CountdownTimer.swift */; };
 		72DC8C0B279EF7ED00ECB001 /* StocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C0A279EF7ED00ECB001 /* StocksApp.swift */; };
 		72DC8C0F279EF7EF00ECB001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DC8C0E279EF7EF00ECB001 /* Assets.xcassets */; };
 		72DC8C12279EF7EF00ECB001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DC8C11279EF7EF00ECB001 /* Preview Assets.xcassets */; };
@@ -103,6 +104,7 @@
 		7254FB8627A2B36E007FBC13 /* StocksUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StocksUI.h; sourceTree = "<group>"; };
 		7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinnhubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7254FBA427A2B63E007FBC13 /* FinnhubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinnhubClient.h; sourceTree = "<group>"; };
+		7268676727A43E7A0084ED72 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		72A8F8B427A18B7200B84CBD /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		72A8F8B827A18C0700B84CBD /* WatchlistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistPresenter.swift; sourceTree = "<group>"; };
 		72A8F8BC27A18CB300B84CBD /* Watchlist+DevHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Watchlist+DevHelpers.swift"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				7254FB8627A2B36E007FBC13 /* StocksUI.h */,
 				7254FB8F27A2B37B007FBC13 /* Watchlist */,
+				7268676627A43E5F0084ED72 /* Helpers */,
 			);
 			path = StocksUI;
 			sourceTree = "<group>";
@@ -209,6 +212,14 @@
 				72C0005227A03BAE0008218E /* Shared */,
 			);
 			path = FinnhubClient;
+			sourceTree = "<group>";
+		};
+		7268676627A43E5F0084ED72 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7268676727A43E7A0084ED72 /* CountdownTimer.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		72A8F8B327A18B6700B84CBD /* Model */ = {
@@ -497,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7254FB9327A2B38E007FBC13 /* WatchlistView.swift in Sources */,
+				7268676827A43E7A0084ED72 /* CountdownTimer.swift in Sources */,
 				7254FB9127A2B38E007FBC13 /* StockRowViewModel.swift in Sources */,
 				7254FB9027A2B38E007FBC13 /* WatchlistPresenter.swift in Sources */,
 				7254FB9227A2B38E007FBC13 /* WatchlistViewModel.swift in Sources */,
