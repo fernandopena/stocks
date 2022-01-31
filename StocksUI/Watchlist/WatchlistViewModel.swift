@@ -27,6 +27,7 @@ public class WatchlistViewModel: ObservableObject {
         self.lastUpdate = Date.distantPast
         self.autorefreshRemainingTime = WatchlistViewModel.autorefreshInterval
         setupCountdownTimer()
+        fetch()
     }
     
     private func setupCountdownTimer() {
@@ -39,7 +40,7 @@ public class WatchlistViewModel: ObservableObject {
     }
     
     func stopAutorefresh() {
-        self.countdownTimer?.pause()
+        self.countdownTimer?.stop()
     }
     
     func startAutorefresh() {
@@ -47,18 +48,20 @@ public class WatchlistViewModel: ObservableObject {
     }
     
     func fetch() {
-        self.isLoading = true
-        service.getWatchlist { [weak self] result in
-            if let self = self {
-                switch result {
-                case let .success(stocks):
-                    self.dataSource = stocks.map(WatchlistPresenter.map)
-                    self.lastUpdate = Date()
-                    self.countdownTimer?.start(lastFired: self.lastUpdate)
-                case let .failure(error):
-                    self.errorMessage = error.localizedDescription
+        if !self.isLoading {
+            self.isLoading = true
+            service.getWatchlist { [weak self] result in
+                if let self = self {
+                    switch result {
+                    case let .success(stocks):
+                        self.dataSource = stocks.map(WatchlistPresenter.map)
+                        self.lastUpdate = Date()
+                        self.countdownTimer?.start(lastFired: self.lastUpdate)
+                    case let .failure(error):
+                        self.errorMessage = error.localizedDescription
+                    }
+                    self.isLoading = false
                 }
-                self.isLoading = false
             }
         }
     }

@@ -18,20 +18,20 @@ public struct WatchlistView: View {
     @Environment(\.scenePhase) var scenePhase
     
     public var body: some View {
-        VStack() {
-            List {
-                if viewModel.dataSource.isEmpty {
-                    emptySection
-                } else {
-                    stocksSection
-                }
+        List {
+            autorefreshSection
+            if !viewModel.dataSource.isEmpty {
+                stocksSection
+            } else if !viewModel.isLoading {
+                emptySection
             }
-            .refreshable {
-                viewModel.fetch()
-            }
-            .listStyle(GroupedListStyle())
-            autorefreshView
         }
+        .refreshable {
+            viewModel.fetch()
+        }
+        .listStyle(PlainListStyle())
+        .navigationTitle("Watchlist")
+        .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: Binding<Bool>(
             get: { viewModel.errorMessage != nil },
             set: { _ in viewModel.errorMessage = nil }
@@ -51,12 +51,16 @@ public struct WatchlistView: View {
             } else {
                 viewModel.stopAutorefresh()
             }
-        }.navigationTitle("Watchlist")
+        }
     }
 }
 
 
 private extension WatchlistView {
+    var autorefreshSection: some View {
+        Section(header: autorefreshHeader) {}
+    }
+    
     var stocksSection: some View {
         Section {
             ForEach(viewModel.dataSource) {
@@ -72,18 +76,35 @@ private extension WatchlistView {
         }
     }
     
-    var autorefreshView: some View {
-        Group {
+    var autorefreshHeader: some View {
+        ZStack(alignment: .center) {
+            Color(.clear)
             if viewModel.isLoading {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
             } else if viewModel.autorefreshRemainingTime > 0 {
                 Text("Updates in: \(viewModel.autorefreshRemainingTime)")
-                    .padding(.bottom, 5)
             }
         }
+        .frame(height: 20)
+
+    }
+    
+    var autorefreshView: some View {
+        ZStack(alignment: .center) {
+            Color(.systemGroupedBackground)
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+            } else if viewModel.autorefreshRemainingTime > 0 {
+                Text("Updates in: \(viewModel.autorefreshRemainingTime)")
+                    .padding(.vertical, 5)
+            }
+        }
+        .frame(height: 40)
     }
 }
+
 
 
 struct WatchlistView_Previews: PreviewProvider {
@@ -91,5 +112,6 @@ struct WatchlistView_Previews: PreviewProvider {
         NavigationView {
             WatchlistView(viewModel: WatchlistViewModel(service: WatchlistServiceMock()))
         }
+        .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }

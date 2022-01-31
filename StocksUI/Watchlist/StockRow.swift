@@ -16,18 +16,16 @@ struct StockRow: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
-                Text("\(viewModel.symbol)")
-                Text("\(viewModel.time)")
-                    .font(.footnote)
-            }
+            Text("\(viewModel.symbol)")
+                .font(.headline)
             Spacer()
             
             VStack(alignment: .trailing) {
                 Text("\(viewModel.price)")
-                    .font(.body)
+                    .font(.subheadline)
                 Text("\(viewModel.percentChange)")
                     .font(.footnote)
+                    .foregroundColor(viewModel.changeState.color)
             }
         }
     }
@@ -36,7 +34,19 @@ struct StocksListRow_Previews: PreviewProvider {
     static var previews: some View {
         StockRow(viewModel: StockRowViewModel(symbol: "AAPL",
                                               price: "161.74",
-                                              percentChange: "0.07 %",
-                                              time: "12:10:43"))
+                                              percentChange: "▲ 0.07%",
+                                              changeState: .positive))
     }
 }
+
+
+private extension StockRowViewModel.ChangeState {
+    var color: Color {
+        switch self {
+        case .neutral: return .black
+        case .negative: return .red
+        case .positive: return .green
+        }
+    }
+}
+ 

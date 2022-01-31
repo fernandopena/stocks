@@ -38,7 +38,7 @@ public class CountdownTimer: ObservableObject {
         }
     }
     
-    public func pause() {
+    public func stop() {
         timer?.invalidate()
         timer = nil
     }
