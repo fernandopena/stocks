@@ -21,9 +21,36 @@ struct StocksApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                WatchlistView(viewModel: viewModel)
+            TabView {
+                NavigationView {
+                    WatchlistUIKitView(viewModel: viewModel)
+                        .navigationTitle("Watchlist UIKit")
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+                .tabItem {
+                    Image(systemName: "iphone")
+                    Text("UIKit")
+                }
+                NavigationView {
+                    WatchlistContainerUIKitView(viewModel: viewModel)
+                        .navigationTitle("Watchlist UIKit 2")
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+                .tabItem {
+                    Image(systemName: "iphone")
+                    Text("UIKit 2")
+                }
+                NavigationView {
+                    WatchlistView(viewModel: viewModel)
+                        .navigationTitle("Watchlist SwiftUI")
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+                .tabItem {
+                    Image(systemName: "swift")
+                    Text("SwiftUI")
+                }
             }
+            
         }
     }
 }

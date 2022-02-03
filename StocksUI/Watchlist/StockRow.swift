@@ -40,7 +40,7 @@ struct StocksListRow_Previews: PreviewProvider {
 }
 
 
-private extension StockRowViewModel.ChangeState {
+extension StockRowViewModel.ChangeState {
     var color: Color {
         switch self {
         case .neutral: return .black

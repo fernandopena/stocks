@@ -14,24 +14,18 @@ public struct WatchlistView: View {
     public init(viewModel: WatchlistViewModel) {
         self.viewModel = viewModel
     }
-    
-    @Environment(\.scenePhase) var scenePhase
-    
+        
     public var body: some View {
-        List {
-            autorefreshSection
-            if !viewModel.dataSource.isEmpty {
-                stocksSection
-            } else if !viewModel.isLoading {
-                emptySection
+        VStack {
+            autorefreshView
+            List {
+                mainSection
             }
+            .refreshable {
+                viewModel.fetch()
+            }
+            .listStyle(PlainListStyle())
         }
-        .refreshable {
-            viewModel.fetch()
-        }
-        .listStyle(PlainListStyle())
-        .navigationTitle("Watchlist")
-        .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: Binding<Bool>(
             get: { viewModel.errorMessage != nil },
             set: { _ in viewModel.errorMessage = nil }
@@ -45,65 +39,46 @@ public struct WatchlistView: View {
                 secondaryButton: .cancel()
             )
         })
-        .onChange(of: scenePhase) { newPhase in
-            if newPhase == .active {
-                viewModel.startAutorefresh()
-            } else {
-                viewModel.stopAutorefresh()
-            }
+        .onAppear {
+            viewModel.startAutorefresh()
+         }
+        .onDisappear {
+            viewModel.stopAutorefresh()
         }
+       
     }
 }
 
 
 private extension WatchlistView {
-    var autorefreshSection: some View {
-        Section(header: autorefreshHeader) {}
-    }
-    
-    var stocksSection: some View {
+    var mainSection: some View {
         Section {
-            ForEach(viewModel.dataSource) {
-                StockRow(viewModel: $0)
+            if !viewModel.dataSource.isEmpty {
+                stocksContent
+            } else if !viewModel.isLoading {
+                emptyContent
             }
         }
     }
     
-    var emptySection: some View {
-        Section {
-            Text("No results")
-                .foregroundColor(.gray)
+    var stocksContent: some View {
+        ForEach(viewModel.dataSource) {
+            StockRow(viewModel: $0)
         }
     }
     
-    var autorefreshHeader: some View {
-        ZStack(alignment: .center) {
-            Color(.clear)
-            if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-            } else if viewModel.autorefreshRemainingTime > 0 {
-                Text("Updates in: \(viewModel.autorefreshRemainingTime)")
-            }
-        }
-        .frame(height: 20)
-
+    var emptyContent: some View {
+        Text("No results")
+            .foregroundColor(.gray)
     }
     
     var autorefreshView: some View {
-        ZStack(alignment: .center) {
-            Color(.systemGroupedBackground)
-            if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-            } else if viewModel.autorefreshRemainingTime > 0 {
-                Text("Updates in: \(viewModel.autorefreshRemainingTime)")
-                    .padding(.vertical, 5)
-            }
-        }
-        .frame(height: 40)
+        AutorefreshView(isLoading: viewModel.isLoading,
+                        remainingTime: viewModel.autorefreshRemainingTime)
+            .frame(height: 20)
     }
 }
+
 
 
 
@@ -113,5 +88,24 @@ struct WatchlistView_Previews: PreviewProvider {
             WatchlistView(viewModel: WatchlistViewModel(service: WatchlistServiceMock()))
         }
         .previewInterfaceOrientation(.portraitUpsideDown)
+    }
+}
+
+
+public struct AutorefreshView: View {
+    var isLoading: Bool
+    var remainingTime: Int
+
+    public var body: some View {
+        ZStack(alignment: .center) {
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+            } else if remainingTime > 0 {
+                Text("Updates in: \(remainingTime)")
+                    .foregroundColor(.gray)
+                    .font(.footnote)
+            }
+        }
     }
 }

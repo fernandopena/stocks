@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721B4E4127AC057A003D7B8E /* WatchlistContainerUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B4E4027AC057A003D7B8E /* WatchlistContainerUIKitView.swift */; };
+		721B4E4327AC059E003D7B8E /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B4E4227AC059E003D7B8E /* StockCell.swift */; };
+		721B4E4527AC05C9003D7B8E /* WatchlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B4E4427AC05C9003D7B8E /* WatchlistTableViewController.swift */; };
+		721B4E4727AC060D003D7B8E /* WatchlistContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B4E4627AC060D003D7B8E /* WatchlistContainerViewController.swift */; };
+		721B4E4B27AC06BE003D7B8E /* SplittedWatchlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721B4E4A27AC06BE003D7B8E /* SplittedWatchlist.storyboard */; };
+		721B4E4D27AC20EC003D7B8E /* AutorefreshHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B4E4C27AC20EC003D7B8E /* AutorefreshHostingController.swift */; };
 		7254FB7427A2B211007FBC13 /* StocksCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7254FB7327A2B211007FBC13 /* StocksCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7254FB7727A2B211007FBC13 /* StocksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB7127A2B211007FBC13 /* StocksCore.framework */; };
 		7254FB7827A2B211007FBC13 /* StocksCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7254FB7127A2B211007FBC13 /* StocksCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -34,6 +40,9 @@
 		7254FBB127A2B662007FBC13 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0005627A078BB0008218E /* JSONMapper.swift */; };
 		7254FBB227A2B662007FBC13 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C39279F3D0D00ECB001 /* HTTPClient.swift */; };
 		7268676827A43E7A0084ED72 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268676727A43E7A0084ED72 /* CountdownTimer.swift */; };
+		726A300027A8294900131DD2 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726A2FFF27A8294900131DD2 /* WatchlistViewController.swift */; };
+		726A300327A82D5800131DD2 /* Watchlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726A300227A82D5800131DD2 /* Watchlist.storyboard */; };
+		726A300527A835CF00131DD2 /* WatchlistUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726A300427A835CF00131DD2 /* WatchlistUIKitView.swift */; };
 		72DC8C0B279EF7ED00ECB001 /* StocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC8C0A279EF7ED00ECB001 /* StocksApp.swift */; };
 		72DC8C0F279EF7EF00ECB001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DC8C0E279EF7EF00ECB001 /* Assets.xcassets */; };
 		72DC8C12279EF7EF00ECB001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DC8C11279EF7EF00ECB001 /* Preview Assets.xcassets */; };
@@ -98,6 +107,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		721B4E4027AC057A003D7B8E /* WatchlistContainerUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistContainerUIKitView.swift; sourceTree = "<group>"; };
+		721B4E4227AC059E003D7B8E /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
+		721B4E4427AC05C9003D7B8E /* WatchlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistTableViewController.swift; sourceTree = "<group>"; };
+		721B4E4627AC060D003D7B8E /* WatchlistContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistContainerViewController.swift; sourceTree = "<group>"; };
+		721B4E4A27AC06BE003D7B8E /* SplittedWatchlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplittedWatchlist.storyboard; sourceTree = "<group>"; };
+		721B4E4C27AC20EC003D7B8E /* AutorefreshHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorefreshHostingController.swift; sourceTree = "<group>"; };
 		7254FB7127A2B211007FBC13 /* StocksCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StocksCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7254FB7327A2B211007FBC13 /* StocksCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StocksCore.h; sourceTree = "<group>"; };
 		7254FB8427A2B36E007FBC13 /* StocksUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StocksUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +120,9 @@
 		7254FBA227A2B63E007FBC13 /* FinnhubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinnhubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7254FBA427A2B63E007FBC13 /* FinnhubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinnhubClient.h; sourceTree = "<group>"; };
 		7268676727A43E7A0084ED72 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		726A2FFF27A8294900131DD2 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
+		726A300227A82D5800131DD2 /* Watchlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Watchlist.storyboard; sourceTree = "<group>"; };
+		726A300427A835CF00131DD2 /* WatchlistUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistUIKitView.swift; sourceTree = "<group>"; };
 		72A8F8B427A18B7200B84CBD /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		72A8F8B827A18C0700B84CBD /* WatchlistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistPresenter.swift; sourceTree = "<group>"; };
 		72A8F8BC27A18CB300B84CBD /* Watchlist+DevHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Watchlist+DevHelpers.swift"; sourceTree = "<group>"; };
@@ -162,6 +180,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721B4E4827AC063C003D7B8E /* SingleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				726A2FFF27A8294900131DD2 /* WatchlistViewController.swift */,
+				726A300227A82D5800131DD2 /* Watchlist.storyboard */,
+				726A300427A835CF00131DD2 /* WatchlistUIKitView.swift */,
+			);
+			path = SingleViewController;
+			sourceTree = "<group>";
+		};
+		721B4E4927AC065C003D7B8E /* SplittedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				721B4E4627AC060D003D7B8E /* WatchlistContainerViewController.swift */,
+				721B4E4427AC05C9003D7B8E /* WatchlistTableViewController.swift */,
+				721B4E4A27AC06BE003D7B8E /* SplittedWatchlist.storyboard */,
+				721B4E4027AC057A003D7B8E /* WatchlistContainerUIKitView.swift */,
+				721B4E4C27AC20EC003D7B8E /* AutorefreshHostingController.swift */,
+			);
+			path = SplittedViewController;
+			sourceTree = "<group>";
+		};
 		7254FB7227A2B211007FBC13 /* StocksCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +226,7 @@
 		7254FB8F27A2B37B007FBC13 /* Watchlist */ = {
 			isa = PBXGroup;
 			children = (
+				726A300127A82CF100131DD2 /* UIKit */,
 				72A8F8B827A18C0700B84CBD /* WatchlistPresenter.swift */,
 				72DC8C18279EF86F00ECB001 /* WatchlistViewModel.swift */,
 				72DC8C1A279EF87E00ECB001 /* WatchlistView.swift */,
@@ -220,6 +261,16 @@
 				7268676727A43E7A0084ED72 /* CountdownTimer.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		726A300127A82CF100131DD2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				721B4E4827AC063C003D7B8E /* SingleViewController */,
+				721B4E4927AC065C003D7B8E /* SplittedViewController */,
+				721B4E4227AC059E003D7B8E /* StockCell.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		72A8F8B327A18B6700B84CBD /* Model */ = {
@@ -470,6 +521,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726A300327A82D5800131DD2 /* Watchlist.storyboard in Resources */,
+				721B4E4B27AC06BE003D7B8E /* SplittedWatchlist.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,12 +560,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				721B4E4527AC05C9003D7B8E /* WatchlistTableViewController.swift in Sources */,
+				721B4E4127AC057A003D7B8E /* WatchlistContainerUIKitView.swift in Sources */,
+				721B4E4727AC060D003D7B8E /* WatchlistContainerViewController.swift in Sources */,
+				726A300027A8294900131DD2 /* WatchlistViewController.swift in Sources */,
 				7254FB9327A2B38E007FBC13 /* WatchlistView.swift in Sources */,
 				7268676827A43E7A0084ED72 /* CountdownTimer.swift in Sources */,
+				721B4E4327AC059E003D7B8E /* StockCell.swift in Sources */,
 				7254FB9127A2B38E007FBC13 /* StockRowViewModel.swift in Sources */,
 				7254FB9027A2B38E007FBC13 /* WatchlistPresenter.swift in Sources */,
+				721B4E4D27AC20EC003D7B8E /* AutorefreshHostingController.swift in Sources */,
 				7254FB9227A2B38E007FBC13 /* WatchlistViewModel.swift in Sources */,
 				7254FB9427A2B38E007FBC13 /* StockRow.swift in Sources */,
+				726A300527A835CF00131DD2 /* WatchlistUIKitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

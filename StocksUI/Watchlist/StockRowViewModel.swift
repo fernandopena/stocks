@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct StockRowViewModel: Identifiable {
+struct StockRowViewModel: Identifiable, Hashable {
     enum ChangeState {
         case neutral
         case negative
